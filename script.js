@@ -1,13 +1,9 @@
-
-
-
 function findNationality () {
     var firstName = document.forms["myForm"]["firstName"].value;
     var url = "https://api.nationalize.io?name=" + firstName ; 
     getNationality(url).catch(error => {
         console.error(error);
         });
-    alert ("You typed: " + url);
 }
 
 async function getNationality(url){
